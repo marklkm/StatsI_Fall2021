@@ -37,7 +37,17 @@ setwd("~/Documents/GitHub/QTM200Spring2021/problem_sets/PS1")
 # Problem 1
 #####################
 
+# Because the sample or n < 30 a t-distribution can be used as opposed to a normal distribution
+
 y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)
+
+# get length of y which is 25
+length(y)
+# get the sample mean ( x bar) of y which is 98.4
+mean(y)
+# get the s or standard deviation of y which is 13.09287
+sd(y)
+
 
 #####################
 # Problem 2

@@ -47,6 +47,8 @@ mean(y)
 # get the s or standard deviation of y which is 13.09287
 sd(y)
 
+qt()
+
 #####################
 # Problem 2
 #####################

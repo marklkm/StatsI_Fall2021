@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  30 SEP 2021 17:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  30 SEP 2021 17:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1006,50 +1006,83 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 276--277
 [][] 
  []
 
-./PS01_marklkm.tex:279: Too many }'s.
+[5 <./Rplot-marklkm.png>]
+<X1 and X2 Rplot.png, id=165, 598.235pt x 397.485pt>
+File: X1 and X2 Rplot.png Graphic file (type png)
+<use X1 and X2 Rplot.png>
+Package pdftex.def Info: X1 and X2 Rplot.png  used on input line 278.
+(pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 278--279
+[][] 
+ []
+
+[6 <./Scatter Smooth Rplot.png>]
+<X2 and X3 Rplot.png, id=171, 598.235pt x 397.485pt>
+File: X2 and X3 Rplot.png Graphic file (type png)
+<use X2 and X3 Rplot.png>
+Package pdftex.def Info: X2 and X3 Rplot.png  used on input line 280.
+(pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 280--281
+[][] 
+ []
+
+[7 <./X1 and X2 Rplot.png>]
+<X3 and X2 Rplot.png, id=178, 598.235pt x 397.485pt>
+File: X3 and X2 Rplot.png Graphic file (type png)
+<use X3 and X2 Rplot.png>
+Package pdftex.def Info: X3 and X2 Rplot.png  used on input line 282.
+(pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 282--283
+[][] 
+ []
+
+./PS01_marklkm.tex:284: Too many }'s.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.279 \end{figure}
+l.284 \end{figure}
                   
 ? 
-[5 <./Rplot-marklkm.png>]
-./PS01_marklkm.tex:279: Extra \endgroup.
+[8 <./X2 and X3 Rplot.png>]
+./PS01_marklkm.tex:284: Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
-l.279 \end{figure}
+l.284 \end{figure}
                   
 ? 
-./PS01_marklkm.tex:279: Too many }'s.
+./PS01_marklkm.tex:284: Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.279 \end{figure}
+l.284 \end{figure}
                   
 ? 
 
-./PS01_marklkm.tex:279: LaTeX Error: \begin{document} ended by \end{figure}.
+./PS01_marklkm.tex:284: LaTeX Error: \begin{document} ended by \end{figure}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.279 \end{figure}
+l.284 \end{figure}
                   
 ? 
-./PS01_marklkm.tex:279: Extra \endgroup.
+./PS01_marklkm.tex:284: Extra \endgroup.
 <recently read> \endgroup 
                           
-l.279 \end{figure}
+l.284 \end{figure}
                   
 ? 
-[6 <./Scatter Smooth Rplot.png>] [7] [8] (./PS01_marklkm.aux)
+[9 <./X3 and X2 Rplot.png>] [10] [11] (./PS01_marklkm.aux)
 Package rerunfilecheck Info: File `PS01_marklkm.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26359 strings out of 478994
- 448921 string characters out of 5858184
- 1280503 words of memory out of 5000000
- 43140 multiletter control sequences out of 15000+600000
+ 26380 strings out of 478994
+ 449346 string characters out of 5858184
+ 1280505 words of memory out of 5000000
+ 43155 multiletter control sequences out of 15000+600000
  414216 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,6n,89p,3244b,2545s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1065,10 +1098,10 @@ cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
 texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on PS01_marklkm.pdf (8 pages, 234547 bytes).
+Output written on PS01_marklkm.pdf (11 pages, 298160 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
- 319 compressed objects within 4 object streams
- 216 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 370 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 219 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

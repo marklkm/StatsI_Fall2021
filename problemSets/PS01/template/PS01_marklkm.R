@@ -43,7 +43,7 @@ setwd("/Users/mark/documents/ASDS-applied-stats-2021/StatsI_Fall2021")
 # The sample size is 25
 y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)
 
-# get the sample mean ( x bar) of y which is 98.4
+# get the sample mean ( x bar) of y which is 98.44
 n <- length(y) 
 # sample mean
 mean(y)
@@ -59,8 +59,8 @@ sd(y)
 c90 <- qt(.05, 24, lower.tail = FALSE)
 c90
 # CI tells us to take the mean of 98.44 and plus or minus 4.4778
-lower_lvl <- mean(y) - c90*(sd(y)/sqrt(n))
-upper_lvl <- mean(y) + c90*(sd(y)/sqrt(n))
+lower <- mean(y) - c90*(sd(y)/sqrt(n))
+upper <- mean(y) + c90*(sd(y)/sqrt(n))
 # get the s or standard deviation of y which is 13.09287
 #sd(y)
 # Using a 90% confidence level and need to find the confidence interval
@@ -69,7 +69,7 @@ upper_lvl <- mean(y) + c90*(sd(y)/sqrt(n))
 # 1.71 * 13.09287 / square root of 25 = 4.4778
 # 98.44 - 4.778 = 93.96 is the lower level
 # 98.44 + 4.778 = 102.92 is the upper level
-c(lower_lvl, upper_lvl)
+c(lower, upper)
 
 
 # t test can be used for small samples

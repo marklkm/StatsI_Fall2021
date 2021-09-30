@@ -51,6 +51,7 @@ sd(y)
 #sd(y)
 # Using a 90% confidence level and need to find the confidence interval
 # Confidence Level or CI is the margin of error and written as ±
+# CI is to do with how reliable the estimation is
 # allowing for a 2.5%
 # sample mean = 98.4
 # standard deviation is 13.09287

@@ -69,7 +69,7 @@
 	
 	\section*{Instructions}
 	\begin{itemize}
-		\item Please show your work! You may lose points by simply writing in the answer. If the problem requires you to execute commands in \texttt{R}, please include the code you used to get your answers. Please also include the \texttt{PS01_marklkm.R} file that contains your code. If you are not sure if work needs to be shown for a particular problem, please ask.
+		\item Please show your work! You may lose points by simply writing in the answer. If the problem requires you to execute commands in \texttt{R}, please include the code you used to get your answers. Please also include the \texttt{.R} file that contains your code. If you are not sure if work needs to be shown for a particular problem, please ask.
 		\item Your homework should be submitted electronically on GitHub in \texttt{.pdf} form.
 		\item This problem set is due before 8:00 on Friday October 1, 2021. No late assignments will be accepted.
 		\item Total available points for this homework is 100.
@@ -81,7 +81,7 @@
 A school counselor was curious about the average of IQ of the students in her school and took a random sample of 25 students' IQ scores. The following is the data set:\\
 \vspace{.5cm}
 
-\lstinputlisting[language=R, firstline=40, lastline=40]{PS01_marklkm.R}  
+\lstinputlisting[language=R, firstline=40, lastline=40]{PS01.R}  
 
 \vspace{1cm}
 
@@ -91,10 +91,11 @@ A school counselor was curious about the average of IQ of the students in her sc
 	\item Next, the school counselor was curious  whether  the average student IQ in her school is higher than the average IQ score (100) among all the schools in the country.\\ 
 	
 	\noindent Using the same sample, conduct the appropriate hypothesis test with $\alpha=0.05$.
+	\end{enumerate}
 	
-	\item My Answer
+\section*{Problem 1 - My Answer}
 	
-	\usepackage{listings}
+
 
 \begin{lstlisting}[language=R]
 #####################
@@ -138,9 +139,19 @@ c(lower_lvl, upper_lvl)
 
 # t test can be used for small samples
 t.test(y)
+
 \end{lstlisting}
 	
-\end{enumerate}
+\newpage
+
+\section*{Problem 1 - My Answer  - R console output}
+	
+
+\begin{lstlisting}[language=R]
+
+> # The sample size is 25> y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)> > # get the sample mean ( x bar) of y which is 98.4> n <- length(y) > # sample mean> mean(y)[1] 98.44> # standard deviation> sd(y)[1] 13.09287> (sd(y)/sqrt(n))[1] 2.618575> # CI of 90%> # From tables look for Degree of Freedom or DF of 24 and alpha level of 0.05> # this gives 1.71 or a t-score of 1.71> # 1. 25 - 1 = 24> # 2. 1 - .90 = .05 or the alpha level> # use alpha level of 0.05> c90 <- qt(.05, 24, lower.tail = FALSE)> c90[1] 1.710882> # CI tells us to take the mean of 98.44 and plus or minus 4.4778> lower_lvl <- mean(y) - c90*(sd(y)/sqrt(n))> upper_lvl <- mean(y) + c90*(sd(y)/sqrt(n))> # get the s or standard deviation of y which is 13.09287> #sd(y)> # Using a 90% confidence level and need to find the confidence interval> # Confidence Level or CI is the margin of error and written as ±> # CI is to do with how reliable the estimation is> # 1.71 * 13.09287 / square root of 25 = 4.4778> # 98.44 - 4.778 = 93.96 is the lower level> # 98.44 + 4.778 = 102.92 is the upper level> c(lower_lvl, upper_lvl)[1]  93.95993 102.92007> # t test can be used for small samples> t.test(y)	One Sample t-testdata:  yt = 37.593, df = 24, p-value < 2.2e-16alternative hypothesis: true mean is not equal to 095 percent confidence interval:  93.03553 103.84447sample estimates:mean of x     98.44 
+
+\end{lstlisting}
 
 \newpage
 

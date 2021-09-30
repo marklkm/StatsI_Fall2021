@@ -76,24 +76,6 @@ c(lower_lvl, upper_lvl)
 t.test(y)
 
 
-# generating x coordinates
-xpos <- seq(- 100, 100, by = 20) 
-
-print ("X coordinates")
-print (xpos)
-
-# generating y coordinates using dt() method
-# degreesoffreedom
-degree <- 2
-ypos <- dt(xpos, df = degree)
-
-print ("Y coordinates")
-print (ypos)
-
-# plotting t distribution
-plot (ypos , type = "l")
-
-# Q1. part 2
 
 
 
@@ -108,8 +90,16 @@ expenditure[2:5]
 
 # using pairs() a matrix of scatter plots is produced
 
+
 pairs(expenditure[2:5], main = "Correlation Matrix shown as a scatter plot")
 # This shows that it is not correlated and is random
+
+
+
+
+
+
+
 
 # Housing assistance and per capita expenditure / income
 scatter.smooth(expenditure$Y, expenditure$X1, ylab="per capita income", xlab = "housing assistance")

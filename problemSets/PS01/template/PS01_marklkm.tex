@@ -187,5 +187,41 @@ Please plot the relationship between \emph{Y} and \emph{Region}? On average, whi
 Please plot the relationship between \emph{Y} and \emph{X1}? Describe this graph and the relationship. Reproduce the above graph including one more variable \emph{Region} and display different regions with different types of symbols and colors.
 \end{itemize}
 
+\newpage
+
+\section*{Problem 2 - My Answer}
+	
+
+
+\begin{lstlisting}[language=R]
+
+#####################
+# Problem 2 = My Answer
+#####################
+
+expenditure <- read.table("https://raw.githubusercontent.com/ASDS-TCD/StatsI_Fall2021/main/datasets/expenditure.txt", header=T)
+str(expenditure)
+# rows and columns 2 to 5
+expenditure[2:5]
+
+# using pairs() a matrix of scatter plots is produced
+
+
+pairs(expenditure[2:5], main = "Correlation Matrix shown as a scatter plot")
+# This shows that it is not correlated and is random
+
+# Housing assistance and per capita expenditure / income
+scatter.smooth(expenditure$Y, expenditure$X1, ylab="per capita income", xlab = "housing assistance")
+# cor function calculates correlation among the vectors
+cor(expenditure$Y, expenditure$X1)
+
+
+\end{lstlisting}
+
+ \includegraphics[width=\linewidth]{Rplot-marklkm.png}
+
+
+\end{figure}
+
 
 \end{document}

@@ -89,17 +89,8 @@ str(expenditure)
 expenditure[2:5]
 
 # using pairs() a matrix of scatter plots is produced
-
-
 pairs(expenditure[2:5], main = "Correlation Matrix shown as a scatter plot")
 # This shows that it is not correlated and is random
-
-
-
-
-
-
-
 
 # Housing assistance and per capita expenditure / income
 scatter.smooth(expenditure$Y, expenditure$X1, ylab="per capita income", xlab = "housing assistance")

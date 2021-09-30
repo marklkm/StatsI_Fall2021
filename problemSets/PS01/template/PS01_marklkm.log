@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  30 SEP 2021 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  30 SEP 2021 15:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -996,49 +996,60 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 266--267
 [][] 
  []
 
-./PS01_marklkm.tex:269: Too many }'s.
+<Scatter Smooth Rplot.png, id=130, 598.235pt x 397.485pt>
+File: Scatter Smooth Rplot.png Graphic file (type png)
+<use Scatter Smooth Rplot.png>
+Package pdftex.def Info: Scatter Smooth Rplot.png  used on input line 268.
+(pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 268--269
+[][] 
+ []
+
+./PS01_marklkm.tex:271: Too many }'s.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.269 \end{figure}
+l.271 \end{figure}
                   
 ? 
-./PS01_marklkm.tex:269: Extra \endgroup.
+[5 <./Rplot-marklkm.png>]
+./PS01_marklkm.tex:271: Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
-l.269 \end{figure}
+l.271 \end{figure}
                   
 ? 
-./PS01_marklkm.tex:269: Too many }'s.
+./PS01_marklkm.tex:271: Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.269 \end{figure}
+l.271 \end{figure}
                   
 ? 
 
-./PS01_marklkm.tex:269: LaTeX Error: \begin{document} ended by \end{figure}.
+./PS01_marklkm.tex:271: LaTeX Error: \begin{document} ended by \end{figure}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.269 \end{figure}
+l.271 \end{figure}
                   
 ? 
-./PS01_marklkm.tex:269: Extra \endgroup.
+./PS01_marklkm.tex:271: Extra \endgroup.
 <recently read> \endgroup 
                           
-l.269 \end{figure}
+l.271 \end{figure}
                   
 ? 
-[5 <./Rplot-marklkm.png>] (./PS01_marklkm.aux)
+[6 <./Scatter Smooth Rplot.png>] (./PS01_marklkm.aux)
 Package rerunfilecheck Info: File `PS01_marklkm.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26248 strings out of 478994
- 447266 string characters out of 5858184
+ 26255 strings out of 478994
+ 447437 string characters out of 5858184
  1280503 words of memory out of 5000000
- 43127 multiletter control sequences out of 15000+600000
+ 43132 multiletter control sequences out of 15000+600000
  414216 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,6n,89p,3244b,2545s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1054,10 +1065,10 @@ cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
 texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on PS01_marklkm.pdf (5 pages, 203504 bytes).
+Output written on PS01_marklkm.pdf (6 pages, 225219 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 119 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 224 PDF objects out of 1000 (max. 8388607)
+ 199 compressed objects within 2 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

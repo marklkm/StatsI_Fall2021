@@ -34,7 +34,7 @@ lapply(c(),  pkgTest)
 setwd("/Users/mark/documents/ASDS-applied-stats-2021/StatsI_Fall2021")
 
 #####################
-# Problem 1
+# Problem 1 = My Answer
 #####################
 
 # Because the sample or n < 30 a t-distribution can be used as opposed to a normal distribution
@@ -43,33 +43,37 @@ setwd("/Users/mark/documents/ASDS-applied-stats-2021/StatsI_Fall2021")
 # The sample size is 25
 y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)
 
-#length(y)
 # get the sample mean ( x bar) of y which is 98.4
+n <- length(y) 
+# sample mean
 mean(y)
+# standard deviation
 sd(y)
+(sd(y)/sqrt(n))
+# CI of 90%
+# From tables look for Degree of Freedom or DF of 24 and alpha level of 0.05
+# this gives 1.71 or a t-score of 1.71
+# 1. 25 - 1 = 24
+# 2. 1 - .90 = .05 or the alpha level
+# use alpha level of 0.05
+c90 <- qt(.05, 24, lower.tail = FALSE)
+c90
+# CI tells us to take the mean of 98.44 and plus or minus 4.4778
+lower_lvl <- mean(y) - c90*(sd(y)/sqrt(n))
+upper_lvl <- mean(y) + c90*(sd(y)/sqrt(n))
 # get the s or standard deviation of y which is 13.09287
 #sd(y)
 # Using a 90% confidence level and need to find the confidence interval
 # Confidence Level or CI is the margin of error and written as ±
 # CI is to do with how reliable the estimation is
-# allowing for a 2.5%
-# sample mean = 98.4
-# standard deviation is 13.09287
-# sample size is 25
+# 1.71 * 13.09287 / square root of 25 = 4.4778
+# 98.44 - 4.778 = 93.96 is the lower level
+# 98.44 + 4.778 = 102.92 is the upper level
+c(lower_lvl, upper_lvl)
 
-# a for the sample mean
-a <- 98.44
-n <- 25
-# s is for the standard deviation
-s <- 13.09287
 
-error <- qt(0.925, df=n-1)*s/sqrt(n)
-# left
-left<- a-error
-# right
-right <- a+error
-left
-right
+# t test can be used for small samples
+t.test(y)
 
 
 # generating x coordinates
@@ -90,10 +94,6 @@ print (ypos)
 plot (ypos , type = "l")
 
 # Q1. part 2
-# hypothesis test with alpha = 0.05
-# probability of rejecting null hypothesis when it's True
-# 0.05 is a 5% risk that there is a difference in IQs when ther is no difference
-# in the avergae IQs among all schools in the country
 
 
 
@@ -103,10 +103,6 @@ plot (ypos , type = "l")
 
 expenditure <- read.table("https://raw.githubusercontent.com/ASDS-TCD/StatsI_Fall2021/main/datasets/expenditure.txt", header=T)
 str(expenditure)
-unique(expenditure$mode)
-# exp for expenditure
-exp <- expenditure
-head(exp)
-group_mean <- aggregate(exp$Y, list(exp$STATE), mean)
-group_mean <- aggregate(Y ~ STATE, data = df, mean)
-group_mean
+# rows and columns 2 to 5
+expenditure[,2:5]
+

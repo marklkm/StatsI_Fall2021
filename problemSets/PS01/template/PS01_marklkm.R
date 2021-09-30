@@ -88,6 +88,7 @@ str(expenditure)
 # rows and columns 2 to 5
 expenditure[2:5]
 
+# This plots the relationships among Y, X1, X2, and X3
 # using pairs() a matrix of scatter plots is produced
 pairs(expenditure[2:5], main = "Correlation Matrix shown as a scatter plot")
 # This shows that it is not correlated and is random
@@ -95,10 +96,16 @@ pairs(expenditure[2:5], main = "Correlation Matrix shown as a scatter plot")
 # Housing assistance and per capita expenditure / income
 scatter.smooth(expenditure$Y, expenditure$X1, ylab="per capita income", xlab = "housing assistance")
 # cor function calculates correlation among the vectors
+# Region X1
+# has the highest per capita on housing assistance
 cor(expenditure$Y, expenditure$X1)
 scatter.smooth(expenditure$Y, expenditure$X2)
+# regions X2
 cor(expenditure$Y, expenditure$X2)
 scatter.smooth(expenditure$Y, expenditure$X3)
+# Region X3
 cor(expenditure$Y, expenditure$X3)
 scatter.smooth(expenditure$X1, expenditure$X2)
-cor(expenditure$X1, expenditure$X2)
+
+
+

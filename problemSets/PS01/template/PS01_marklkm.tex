@@ -91,6 +91,55 @@ A school counselor was curious about the average of IQ of the students in her sc
 	\item Next, the school counselor was curious  whether  the average student IQ in her school is higher than the average IQ score (100) among all the schools in the country.\\ 
 	
 	\noindent Using the same sample, conduct the appropriate hypothesis test with $\alpha=0.05$.
+	
+	\item My Answer
+	
+	\usepackage{listings}
+
+\begin{lstlisting}[language=R]
+#####################
+# Problem 1 = My Answer
+#####################
+
+# Because the sample or n < 30 a t-distribution can be used as opposed to a normal distribution
+#  t-distribution is a type of probability distribution. used where the sample size is small.
+
+# The sample size is 25
+y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)
+
+# get the sample mean ( x bar) of y which is 98.4
+n <- length(y) 
+# sample mean
+mean(y)
+# standard deviation
+sd(y)
+(sd(y)/sqrt(n))
+# CI of 90%
+# From tables look for Degree of Freedom or DF of 24 and alpha level of 0.05
+# this gives 1.71 or a t-score of 1.71
+# 1. 25 - 1 = 24
+# 2. 1 - .90 = .05 or the alpha level
+# use alpha level of 0.05
+c90 <- qt(.05, 24, lower.tail = FALSE)
+c90
+# CI tells us to take the mean of 98.44 and plus or minus 4.4778
+lower_lvl <- mean(y) - c90*(sd(y)/sqrt(n))
+upper_lvl <- mean(y) + c90*(sd(y)/sqrt(n))
+# get the s or standard deviation of y which is 13.09287
+#sd(y)
+# Using a 90% confidence level and need to find the confidence interval
+# Confidence Level or CI is the margin of error and written as ±
+# CI is to do with how reliable the estimation is
+# 1.71 * 13.09287 / square root of 25 = 4.4778
+# 98.44 - 4.778 = 93.96 is the lower level
+# 98.44 + 4.778 = 102.92 is the upper level
+c(lower_lvl, upper_lvl)
+
+
+# t test can be used for small samples
+t.test(y)
+\end{lstlisting}
+	
 \end{enumerate}
 
 \newpage

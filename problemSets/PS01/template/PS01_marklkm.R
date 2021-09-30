@@ -104,5 +104,20 @@ plot (ypos , type = "l")
 expenditure <- read.table("https://raw.githubusercontent.com/ASDS-TCD/StatsI_Fall2021/main/datasets/expenditure.txt", header=T)
 str(expenditure)
 # rows and columns 2 to 5
-expenditure[,2:5]
+expenditure[2:5]
 
+# using pairs() a matrix of scatter plots is produced
+
+pairs(expenditure[2:5], main = "Correlation Matrix shown as a scatter plot")
+# This shows that it is not correlated and is random
+
+# Housing assistance and per capita expenditure / income
+scatter.smooth(expenditure$Y, expenditure$X1, ylab="per capita income", xlab = "housing assistance")
+# cor function calculates correlation among the vectors
+cor(expenditure$Y, expenditure$X1)
+scatter.smooth(expenditure$Y, expenditure$X2)
+cor(expenditure$Y, expenditure$X2)
+scatter.smooth(expenditure$Y, expenditure$X3)
+cor(expenditure$Y, expenditure$X3)
+scatter.smooth(expenditure$X1, expenditure$X2)
+cor(expenditure$X1, expenditure$X2)

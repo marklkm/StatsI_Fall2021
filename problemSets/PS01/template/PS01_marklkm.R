@@ -74,7 +74,9 @@ c(lower, upper)
 
 # t test can be used for small samples
 t.test(y)
-
+# H0 : μ = 100
+# H1 : μ >100
+(mean - 100)/sd(y)
 
 
 

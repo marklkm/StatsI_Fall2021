@@ -905,4 +905,23 @@ File: lstlang3.sty 2020/03/24 1.8d listings language file
 ! Package Listings Error: File `PS01(.R)' not found.
 
 Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension:
+or enter new name. (Default extension: R)
+
+Enter file name: 
+./PS01.tex:84: Emergency stop.
+<read *> 
+         
+l.84 ...uage=R, firstline=40, lastline=40]{PS01.R}
+                                                  ^^M
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 25105 strings out of 478994
+ 435324 string characters out of 5858184
+ 937487 words of memory out of 5000000
+ 42115 multiletter control sequences out of 15000+600000
+ 413534 words of font info for 70 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 87i,6n,89p,3236b,263s stack positions out of 5000i,500n,10000p,200000b,80000s
+./PS01.tex:84:  ==> Fatal error occurred, no output PDF file produced!

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  30 SEP 2021 17:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.15)  1 OCT 2021 01:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -956,28 +956,108 @@ Type  H <return>  for immediate help.
 l.132 ... is the margin of error and written as ±
                                                   
 ? 
+
+./PS01_marklkm.tex:141: Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.141 # H0 : μ 
+                = 100
+? 
+
+./PS01_marklkm.tex:141: Package inputenc Error: Invalid UTF-8 byte "BC.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.141 # H0 : μ 
+                = 100
+? 
+
+./PS01_marklkm.tex:142: Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142 # H1 : μ 
+                > 100
+? 
+
+./PS01_marklkm.tex:142: Package inputenc Error: Invalid UTF-8 byte "BC.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142 # H1 : μ 
+                > 100
+? 
 [2]
 
-./PS01_marklkm.tex:180: Package inputenc Error: Invalid UTF-8 byte sequence.
+./PS01_marklkm.tex:182: Package inputenc Error: Invalid UTF-8 byte sequence.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.180 ... is the margin of error and written as ±
+l.182 ... is the margin of error and written as ±
                                                   
 ? 
 
-./PS01_marklkm.tex:180: Package inputenc Error: Invalid UTF-8 byte "B1.
+./PS01_marklkm.tex:182: Package inputenc Error: Invalid UTF-8 byte "B1.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.180 ... is the margin of error and written as ±
+l.182 ... is the margin of error and written as ±
                                                   
 ? 
-[3]
+
+./PS01_marklkm.tex:200: Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200  > # H0 : μ 
+                   = 100
+? 
+
+./PS01_marklkm.tex:200: Package inputenc Error: Invalid UTF-8 byte "BC.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200  > # H0 : μ 
+                   = 100
+? 
+
+./PS01_marklkm.tex:201: Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.201 > # H1 : μ 
+                  >100
+? 
+
+./PS01_marklkm.tex:201: Package inputenc Error: Invalid UTF-8 byte "BC.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.201 > # H1 : μ 
+                  >100
+? 
+[3] [4]
 
 ! Package Listings Error: File `PS01(.R)' not found.
 
@@ -985,104 +1065,104 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: R)
 
 Enter file name: 
-[4]
-<Rplot-marklkm.png, id=128, 1039.885pt x 397.485pt>
+[5]
+<Rplot-marklkm.png, id=138, 1039.885pt x 397.485pt>
 File: Rplot-marklkm.png Graphic file (type png)
 <use Rplot-marklkm.png>
-Package pdftex.def Info: Rplot-marklkm.png  used on input line 274.
+Package pdftex.def Info: Rplot-marklkm.png  used on input line 280.
 (pdftex.def)             Requested size: 469.75502pt x 179.55801pt.
-
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 274--275
-[][] 
- []
-
-<Scatter Smooth Rplot.png, id=130, 598.235pt x 397.485pt>
-File: Scatter Smooth Rplot.png Graphic file (type png)
-<use Scatter Smooth Rplot.png>
-Package pdftex.def Info: Scatter Smooth Rplot.png  used on input line 276.
-(pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
-
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 276--277
-[][] 
- []
-
-[5 <./Rplot-marklkm.png>]
-<X1 and X2 Rplot.png, id=165, 598.235pt x 397.485pt>
-File: X1 and X2 Rplot.png Graphic file (type png)
-<use X1 and X2 Rplot.png>
-Package pdftex.def Info: X1 and X2 Rplot.png  used on input line 278.
-(pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
-
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 278--279
-[][] 
- []
-
-[6 <./Scatter Smooth Rplot.png>]
-<X2 and X3 Rplot.png, id=171, 598.235pt x 397.485pt>
-File: X2 and X3 Rplot.png Graphic file (type png)
-<use X2 and X3 Rplot.png>
-Package pdftex.def Info: X2 and X3 Rplot.png  used on input line 280.
-(pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
 
 Overfull \hbox (17.62482pt too wide) in paragraph at lines 280--281
 [][] 
  []
 
-[7 <./X1 and X2 Rplot.png>]
-<X3 and X2 Rplot.png, id=178, 598.235pt x 397.485pt>
-File: X3 and X2 Rplot.png Graphic file (type png)
-<use X3 and X2 Rplot.png>
-Package pdftex.def Info: X3 and X2 Rplot.png  used on input line 282.
+<Scatter Smooth Rplot.png, id=140, 598.235pt x 397.485pt>
+File: Scatter Smooth Rplot.png Graphic file (type png)
+<use Scatter Smooth Rplot.png>
+Package pdftex.def Info: Scatter Smooth Rplot.png  used on input line 282.
 (pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
 
 Overfull \hbox (17.62482pt too wide) in paragraph at lines 282--283
 [][] 
  []
 
-./PS01_marklkm.tex:284: Too many }'s.
+[6 <./Rplot-marklkm.png>]
+<X1 and X2 Rplot.png, id=175, 598.235pt x 397.485pt>
+File: X1 and X2 Rplot.png Graphic file (type png)
+<use X1 and X2 Rplot.png>
+Package pdftex.def Info: X1 and X2 Rplot.png  used on input line 284.
+(pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 284--285
+[][] 
+ []
+
+[7 <./Scatter Smooth Rplot.png>]
+<X2 and X3 Rplot.png, id=182, 598.235pt x 397.485pt>
+File: X2 and X3 Rplot.png Graphic file (type png)
+<use X2 and X3 Rplot.png>
+Package pdftex.def Info: X2 and X3 Rplot.png  used on input line 286.
+(pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 286--287
+[][] 
+ []
+
+[8 <./X1 and X2 Rplot.png>]
+<X3 and X2 Rplot.png, id=188, 598.235pt x 397.485pt>
+File: X3 and X2 Rplot.png Graphic file (type png)
+<use X3 and X2 Rplot.png>
+Package pdftex.def Info: X3 and X2 Rplot.png  used on input line 288.
+(pdftex.def)             Requested size: 469.75502pt x 312.12344pt.
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 288--289
+[][] 
+ []
+
+./PS01_marklkm.tex:290: Too many }'s.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
                                                   \color@endbox 
-l.284 \end{figure}
+l.290 \end{figure}
                   
 ? 
-[8 <./X2 and X3 Rplot.png>]
-./PS01_marklkm.tex:284: Extra \endgroup.
+[9 <./X2 and X3 Rplot.png>]
+./PS01_marklkm.tex:290: Extra \endgroup.
 \color@endgroup ->\endgraf \endgroup 
                                      
-l.284 \end{figure}
+l.290 \end{figure}
                   
 ? 
-./PS01_marklkm.tex:284: Too many }'s.
+./PS01_marklkm.tex:290: Too many }'s.
 \color@endbox ->\color@endgroup \egroup 
                                         
-l.284 \end{figure}
+l.290 \end{figure}
                   
 ? 
 
-./PS01_marklkm.tex:284: LaTeX Error: \begin{document} ended by \end{figure}.
+./PS01_marklkm.tex:290: LaTeX Error: \begin{document} ended by \end{figure}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.284 \end{figure}
+l.290 \end{figure}
                   
 ? 
-./PS01_marklkm.tex:284: Extra \endgroup.
+./PS01_marklkm.tex:290: Extra \endgroup.
 <recently read> \endgroup 
                           
-l.284 \end{figure}
+l.290 \end{figure}
                   
 ? 
-[9 <./X3 and X2 Rplot.png>] [10] [11] (./PS01_marklkm.aux)
+[10 <./X3 and X2 Rplot.png>] [11] [12] (./PS01_marklkm.aux)
 Package rerunfilecheck Info: File `PS01_marklkm.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26380 strings out of 478994
- 449346 string characters out of 5858184
- 1280505 words of memory out of 5000000
- 43155 multiletter control sequences out of 15000+600000
+ 26388 strings out of 478994
+ 449462 string characters out of 5858184
+ 1290504 words of memory out of 5000000
+ 43156 multiletter control sequences out of 15000+600000
  414216 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,6n,89p,3244b,2545s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1098,10 +1178,10 @@ cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
 texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on PS01_marklkm.pdf (11 pages, 298160 bytes).
+Output written on PS01_marklkm.pdf (12 pages, 299075 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
- 332 compressed objects within 4 object streams
- 219 named destinations out of 1000 (max. 500000)
+ 381 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 226 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -56,7 +56,7 @@ cor(difflog, voteshare) # x,y
 # the ggplot plots the regression
 q1_plot <- ggplot(incumbents, aes(difflog, voteshare)) +
   geom_point(alpha = 0.5) + # add a scatterplot
-  geom_smooth(method = "lm") + # add a linear regression line
+  geom_smooth(method = "lm", col="red") + # add a linear regression line
   labs(x = "difflog", y = "voteshare")
 q1_plot
 

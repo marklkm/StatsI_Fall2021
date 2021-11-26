@@ -1,0 +1,435 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{graphicx,textcomp}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage[reqno]{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage{amssymb,enumerate}
+\usepackage[all]{xy}
+\usepackage{endnotes}
+\usepackage{lscape}
+\newtheorem{com}{Comment}
+\usepackage{float}
+\usepackage{hyperref}
+\newtheorem{lem} {Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{cor}{Corollary}
+\newtheorem{obs}{Observation}
+\usepackage[compact]{titlesec}
+\usepackage{dcolumn}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{multirow}
+\usepackage{xcolor}
+\newcolumntype{.}{D{.}{.}{-1}}
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\definecolor{light-gray}{gray}{0.65}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+\newcommand{\Sref}[1]{Section~\ref{#1}}
+\newtheorem{hyp}{Hypothesis}
+
+\title{Problem Set 2}
+\date{Due: October 15, 2021}
+\author{Applied Stats/Quant Methods 1}
+
+\begin{document}
+	\maketitle
+	\section*{Instructions}
+\begin{itemize}
+	\item Please show your work! You may lose points by simply writing in the answer. If the problem requires you to execute commands in \texttt{R}, please include the code you used to get your answers. Please also include the \texttt{.R} file that contains your code. If you are not sure if work needs to be shown for a particular problem, please ask.
+	\item Your homework should be submitted electronically on GitHub in \texttt{.pdf} form.
+	\item This problem set is due before class on Friday October 15, 2021. No late assignments will be accepted.
+	\item Total available points for this homework is 100.
+\end{itemize}
+
+	
+	\vspace{.5cm}
+	\section*{Question 1 (40 points): Political Science}
+		\vspace{.25cm}
+	The following table was created using the data from a study run in a major Latin American city.\footnote{Fried, Lagunes, and Venkataramani (2010). ``Corruption and Inequality at the Crossroad: A Multimethod Study of Bribery and Discrimination in Latin America. \textit{Latin American Research Review}. 45 (1): 76-97.} As part of the experimental treatment in the study, one employee of the research team was chosen to make illegal left turns across traffic to draw the attention of the police officers on shift. Two employee drivers were upper class, two were lower class drivers, and the identity of the driver was randomly assigned per encounter. The researchers were interested in whether officers were more or less likely to solicit a bribe from drivers depending on their class (officers use phrases like, ``We can solve this the easy way'' to draw a bribe). The table below shows the resulting data.
+
+\newpage
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l | c c c }
+		& Not Stopped & Bribe requested & Stopped/given warning \\
+		\\[-1.8ex] 
+		\hline \\[-1.8ex]
+		Upper class & 14 & 6 & 7 \\
+		Lower class & 7 & 7 & 1 \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	
+	\item [(a)]
+	Calculate the $\chi^2$ test statistic by hand (even better if you can do "by hand" in \texttt{R}).\\
+	\vspace{1cm}
+	
+	\begin{lstlisting}[language=R]
+
+# (a) Calculate the x^2 statistic
+
+# create a table in R for the given data
+
+data_table <- matrix(c(14, 6, 7, 7, 7, 1), ncol=3, byrow=TRUE)
+colnames(data_table) <- c('NotStopped','BribeRequested','StoppedGivenWarning')
+rownames(data_table) <- c('UpperClass','LowerClass')
+data_table <- as.table(data_table)
+data_table
+
+barplot(height = data_table, 
+        beside = TRUE, 
+        legend.text = TRUE,
+        args.legend = list(x = "topleft", cex = 0.4, box.col = "purple"))
+
+# build the dataset for the table
+
+df <- data.frame (first_column  = c("NotStopped"),
+                  second_column = c("BribeRequested"),
+                  third_column = c("StoppedGivenWarning"))
+
+# Using the chisq.test to get the x^2 test statistic or the chi square statistic
+# x^2 = 3.7912
+# DF = 2 (or n-1)
+# value of alpha = .1 (for part b)
+
+\end{lstlisting}
+	
+	\newpage
+	\item [(b)]
+	Now calculate the p-value from the test statistic you just created (in \texttt{R}).\footnote{Remember frequency should be $>$ 5 for all cells, but let's calculate the p-value here anyway.}  What do you conclude if $\alpha = .1$?\\
+	
+		\begin{lstlisting}[language=R]
+
+# (b) Now calculate thep-value from the test statistic you just created (in R).
+# What do you conclude if alpha = .1
+
+chisq <- chisq.test(data_table)
+chisq
+tail(df, 2)
+
+
+# x^2 = 3.7912
+# DF = 2
+# alpha value = .01
+# critical value = 1.885618
+# x^2(3) = 3.7912, p < 0.1 (the probability was set at 0.1)
+
+# Find the Critical Value
+qt(p=0.1, df=2, lower.tail = FALSE)
+# This gives a critical value of 1.885618
+
+# The p-value is 0.1502 and the alpha value = 0.1
+# This concludes that alpha value 0.1 is less than the p-value of 0.1502
+# X^2 > critical value 
+# reject the Null hypothesis
+
+\end{lstlisting}
+	
+	\newpage
+	\item [(c)] Calculate the standardized residuals for each cell and put them in the table below.
+	\vspace{1cm}
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{l | c c c }
+			& Not Stopped & Bribe requested & Stopped/given warning \\
+			\\[-1.8ex] 
+			\hline \\[-1.8ex]
+			Upper class  &  &  &  \\
+			\\
+			Lower class &  &   &   \\
+			
+		\end{tabular}
+	\end{table}
+	
+	
+	\vspace{2cm}
+	
+			\begin{lstlisting}[language=R]
+
+# (c) Calculate the standardized residual for each cell and put them in the
+# table below
+
+chisq$residuals
+# this gives
+#             NotStopped BribeRequested StoppedGivenWarning
+# UpperClass  0.1360828     -0.8153742           0.8189230
+#LowerClass  -0.1825742      1.0939393          -1.0987005
+
+\end{lstlisting}
+	
+	\item [(d)] How might the standardized residuals help you interpret the results?  
+	
+		\begin{lstlisting}[language=R]
+
+# (d) How might the standardized residuals help you interpret the results?
+
+# to help identify outliers 
+
+\end{lstlisting}
+	
+	
+	
+\end{enumerate}
+\newpage
+
+\section*{Question 2 (20 points): Economics}
+Chattopadhyay and Duflo were interested in whether women promote different policies than men.\footnote{Chattopadhyay and Duflo. (2004). ``Women as Policy Makers: Evidence from a Randomized Policy Experiment in India. \textit{Econometrica}. 72 (5), 1409-1443.} Answering this question with observational data is pretty difficult due to potential confounding problems (e.g. the districts that choose female politicians are likely to systematically differ in other aspects too). Hence, they exploit a randomized policy experiment in India, where since the mid-1990s, $\frac{1}{3}$ of village council heads have been randomly reserved for women. A subset of the data from West Bengal can be found at the following link: \url{https://raw.githubusercontent.com/kosukeimai/qss/master/PREDICTION/women.csv}\\
+
+\noindent Each observation in the data set represents a village and there are two villages associated with one GP (i.e. a level of government is called "GP"). Figure~\ref{fig:women_desc} below shows the names and descriptions of the variables in the dataset. The authors hypothesize that female politicians are more likely to support policies female voters want. Researchers found that more women complain about the quality of drinking water than men. You need to estimate the effect of the reservation policy on the number of new or repaired drinking water facilities in the villages.
+\vspace{.2cm}
+\begin{figure}[h!]
+	\caption{\footnotesize{Names and description of variables from Chattopadhyay and Duflo (2004).}}
+	\vspace{.5cm}
+	\centering
+	\label{fig:women_desc}
+	\includegraphics[width=1.1\textwidth]{../../../graphics/women_desc.png}
+\end{figure}		
+
+\newpage
+\begin{enumerate}
+
+
+	\item [(a)] State a null and alternative (two-tailed) hypothesis. 
+	
+	
+			\begin{lstlisting}[language=R]
+
+# (a) State a null and alternative (two-tailed) hypothesis
+
+west_bengal <- read.csv("https://raw.githubusercontent.com/kosukeimai/qss/master/PREDICTION/women.csv")
+attach(west_bengal)
+west_bengal
+summary(west_bengal)
+str(west_bengal)
+ 
+# H0 is the null hypothesis
+# Ha is the alternative hypothesis
+
+# H0: the reservation policy has no effect on the number of new or repaired drinking
+# water facilities in the villages
+# Ha: the reservation policy does have an effect on the number of new or repaired drinking
+# water facilities in the villages
+
+\end{lstlisting}
+	
+	\vspace{2cm}
+	\item [(b)] Run a bivariate regression to test this hypothesis in \texttt{R} (include your code!).
+	
+				\begin{lstlisting}[language=R]
+
+# (b) Run a bivariate regression to test this hypothesis
+# prediction - for the data = women
+# water depends/extends on reserved
+res_policy <- lm(water ~ reserved, data = women)
+summary(res_policy)
+
+# this gives
+#Coefficients:
+#               Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)   14.738      2.286   6.446 4.22e-10 ***
+# reserved       9.252      3.948   2.344   0.0197 *
+
+# and p-value of 0.0197
+# F-statistic: 5.493 on 1 and 320 DF,  p-value: 0.0197
+
+# taking an alpha of 5% 
+# alpha value = .05
+# p-value = .0197
+# the p-value is less than the alpha value that I am trying to test, 
+# so I can reject the null hypothesis
+
+\end{lstlisting}
+	
+	\vspace{6cm}
+	\item [(c)] Interpret the coefficient estimate for reservation policy. 
+	
+					\begin{lstlisting}[language=R]
+
+# (c) Interpret the coefficient for reservation policy
+# when measuring the correlation between two variables is trying to put a
+# number on their association
+
+\end{lstlisting}
+	
+\end{enumerate}
+
+\newpage
+	\section*{Question 3 (40 points): Biology}
+
+There is a physiological cost of reproduction for fruit flies, such that it reduces the lifespan of female fruit flies.  Is there a similar cost to male fruit flies?  This dataset contains observations from five groups of 25 male fruit flies. The experiment tests if increased reproduction reduces longevity for male fruit flies. The five groups are: males forced to live alone, males assigned to live with one or eight newly pregnant females (non-receptive females), and males assigned to live with one or eight virgin females (interested females). The name of the data set is \texttt{fruitfly.csv}.\footnote{Partridge and Farquhar (1981).``Sexual Activity and the Lifespan of Male Fruitflies''. \textit{Nature}. 294, 580-581.}
+	\vspace{1cm}
+
+\begin{tabular}{r|l}
+	\texttt{No} & serial number (1-25) within each group of 25\\
+	\texttt{type} & Type of experimental assignment \\
+	& \hspace{0.1in} $1=$ no females  \\
+	& \hspace{0.1in} $2=$ 1 newly pregnant female \\
+	& \hspace{0.1in} $3=$ 8 newly pregnant females\\
+	& \hspace{0.1in} $4=$ 1 virgin female\\
+	& \hspace{0.1in} $5=$ 8 virgin females\\
+	\texttt{lifespan} & lifespan (days)\\
+	\texttt{thorax} & length of thorax (mm)\\
+	\texttt{sleep} & percentage of each day spent sleeping\\
+\end{tabular}
+	\vspace{1cm}
+\begin{enumerate}
+	
+	\item
+	Import the data set and obtain summary statistiscs and examine the distribution of the overall lifespan of the fruitflies.  
+	
+					\begin{lstlisting}[language=R]
+
+# 1. Import the data set and obtain summary statistics and examine the distrubtion of
+# the overall lifespan of the fruitflies.
+
+# import data set
+dat<-read.csv("http://stat2.org/datasets/FruitFlies.csv")
+# or 
+dat<-read.table("http://stat2.org/datasets/FruitFlies.csv", sep=',', header=TRUE)
+attach(dat)
+dat
+# can also get the descriptive statistics in R using Hmisec package
+install.packages("Hmisc")
+library(Hmisc)
+describe(dat)
+
+\end{lstlisting}
+
+\newpage
+	\item
+	Plot \texttt{lifespan} vs \texttt{thorax}. Does it look like there is a linear relationship? Provide the plot. What is the correlation coefficient between these two variables?
+	
+						\begin{lstlisting}[language=R]
+
+# 2. Plot lifespan vs thorax. 
+plot(Longevity~Thorax, xlab="Thorax",
+     main="Lifespan", ylab= "in days")
+
+boxplot(Longevity~Treatment, data=dat, frame =FALSE)
+summary(dat)
+
+qplot(Sleep, Longevity, data=dat, color=factor(Treatment))+
+  labs(title="Longevity and sleep by treatment")
+
+# The correlation coefficient between the two variables Longevity (or lifespan) and thorax
+# using the Pearson correlation
+cor(dat$Longevity, dat$Thorax)
+# the correlation deficit between the two variables lifespan vs thorax is 0.6364835
+
+# this gives a summary of rhe statistics of the data
+summary(dat) 
+# examines the distrubution of the overall lifespan of the fruitflies
+summary(dat$Longevity)
+
+\end{lstlisting}
+	
+		\vspace{2cm}
+		
+		\includegraphics[width=\linewidth]{lifespan-thorax.png}
+		
+		\includegraphics[width=\linewidth]{Rplot-longevity-sleep.png}
+		
+		
+		
+		
+	\item
+	Regress \texttt{lifespan} on \texttt{thorax}.  Interpret the slope of the fitted model.
+			\vspace{1cm}
+			
+			
+							\begin{lstlisting}[language=R]
+
+# 3. Regress lifespan on thorax. Interpret the slope of the fitted model
+
+
+lm(dat$Longevity ~ dat$Thorax, data=dat)
+# this gives:
+# Call:
+# lm(formula = dat$Longevity ~ dat$Thorax)
+
+# Coefficients:
+# (Intercept)   dat$Thorax  
+# -61.05       144.33 
+
+# 144.3 gives the slope of the line 
+
+\end{lstlisting}		
+			
+			
+			
+	\item
+	Test for a significant linear relationship between  \texttt{lifespan} and \texttt{thorax}. Provide and interpret your results of your test.
+	
+\newpage
+	\item
+	
+	Provide the 90\% confidence interval for the slope of the fitted model.
+	
+			\vspace{.5cm}
+	\begin{itemize}
+		\item
+		Use the formula of confidence interval.		\vspace{.5cm}
+		\item
+		Use the function  \texttt{confint()}  in \texttt{R} .
+	\end{itemize}
+			\vspace{2cm}
+			
+	
+								\begin{lstlisting}[language=R]
+
+# 5. Provide the 90 per cent confidence interval for the slope of the fitted model
+# DF 123
+qt(.05, 123, lower.tail = FALSE)
+
+#Coefficients:
+#  (Intercept)   dat$Thorax  
+#  -61.05       144.33 
+
+\end{lstlisting}	
+			
+			
+	\item Use the \texttt{predict()} function in \texttt{R} to (1) predict an individual fruitfly's lifespan when \texttt{thorax}=0.8 and (2) the average \texttt{lifespan} of fruitflies when \texttt{thorax}=0.8 by the fitted model. This requires that you compute prediction and confidence intervals. What are the expected values of lifespan? What are the prediction and confidence intervals around the expected values? 
+	
+			\vspace{6cm}
+	\item	For a sequence of \texttt{thorax} values, draw a plot with their fitted values for \texttt{lifespan}, as well as the prediction intervals and confidence intervals.
+
+
+
+\end{enumerate}
+\end{document}
